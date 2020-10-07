@@ -1,10 +1,11 @@
 // When the component loads, it will call the getAllPosts method it recieves from the provider and render a list of posts.
 
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { PostContext } from "../providers/PostProvider";
 import Post from "./Post";
 
 const PostList = () => {
+    // useContextHook 
     const { posts, getAllPosts } = useContext(PostContext);
 
     useEffect(() => {
@@ -12,6 +13,7 @@ const PostList = () => {
     }, []);
 
     return (
+
         <div className="container">
             <div className="row justify-content-center">
                 <div className="cards-column">
@@ -21,6 +23,9 @@ const PostList = () => {
                 </div>
             </div>
         </div>
+
+
+
     );
 };
 

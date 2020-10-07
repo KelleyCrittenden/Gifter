@@ -12,6 +12,8 @@ import { PostContext } from "../providers/PostProvider";
 import { useHistory } from "react-router-dom";
 
 const PostForm = () => {
+
+    //use context hook, opening Provider box and using that one method
     const { addPost } = useContext(PostContext);
     const [userProfileId, setUserProfileId] = useState("");
     const [imageUrl, setImageUrl] = useState("");

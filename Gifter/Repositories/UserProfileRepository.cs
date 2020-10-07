@@ -37,7 +37,7 @@ namespace Gifter.Repositories
                             Email = DbUtils.GetString(reader, "Email"),
                             DateCreated = DbUtils.GetDateTime(reader, "PostDateCreated"),
                             ImageUrl = DbUtils.GetString(reader, "ImageUrl"),
-                            Bio = DbUtils.GetString(reader, "Bio"),
+                            Bio = DbUtils.GetString(reader, "Bio")
 
                         });
                     }

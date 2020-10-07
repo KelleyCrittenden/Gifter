@@ -4,6 +4,7 @@
 
 import React, { useState } from "react";
 
+// Step 1, create the box. Don't touch
 export const PostContext = React.createContext();
 
 export const PostProvider = (props) => {
@@ -27,9 +28,11 @@ export const PostProvider = (props) => {
 
     // function to get a single post
     const getPost = (id) => {
-        return fetch(`/api/post/${id}`).then((res) => res.json());
+        return fetch(`/api/post/GetPostByIdWithComments/${id}`).then((res) => res.json());
     };
 
+    // Box full of functions to use in other files
+    // prop drilling
     return (
         <PostContext.Provider value={{ posts, getAllPosts, addPost, getPost }}>
             {props.children}
